@@ -1,0 +1,157 @@
+:root {
+  --bg: #f3f5ff;
+  --card: #ffffff;
+  --text: #121826;
+  --muted: #6b7280;
+  --income: #1f9d55;
+  --expense: #e02424;
+  --primary: #4338ca;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(140deg, #eef2ff, #f9fafb 45%, #e0f2fe);
+  color: var(--text);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.header p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.balance p,
+.income p,
+.expense p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.income p {
+  color: var(--income);
+}
+
+.expense p {
+  color: var(--expense);
+}
+
+.form-card {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #d1d5db;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+.transaction-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.transaction-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  padding: 0.7rem;
+  border-radius: 12px;
+}
+
+.transaction-item .meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.transaction-item .amount.income {
+  color: var(--income);
+  font-weight: 700;
+}
+
+.transaction-item .amount.expense {
+  color: var(--expense);
+  font-weight: 700;
+}
+
+.transaction-item button {
+  background: #111827;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.empty {
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem;
+}

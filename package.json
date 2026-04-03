@@ -1,0 +1,19 @@
+{
+  "name": "expense-tracker-app",
+  "version": "1.0.0",
+  "description": "Full-stack expense tracker with Express and vanilla frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "expense-tracker",
+    "express",
+    "vanilla-js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
